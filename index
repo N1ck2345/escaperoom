@@ -1,1 +1,87 @@
-file:///C:/Users/N1ck2345/AppData/Local/Temp/Escape%20Room%20(2).html
+Escape Room
+
+You are in your bed, not sure what time it is. You feel as though you can wake up, but should you?
+
+[[Wake up]]
+[[Sleep]]
+
+(set: $hoursAsleep to 8)
+(if: $hoursAsleep is 8)[You open your eyes and feel well rested.]
+
+(if: $hoursAsleep > 8)[You open your eyes and feel very well rested. You haven't slept that good in a while.]
+
+[[Get out of bed]]
+You can feel your eyes becoming more and more heavy. You drift back into a deep sleep.
+
+[[Wake up]]
+(if: $hoursAsleep < 12)[[[Sleep]]]
+You have slept $hoursAsleep hours.
+(set: $hoursAsleep to $hoursAsleep + 1)
+You get out of your bed and head to the door. You reach for the handle and try to open it but the door is locked.
+
+[[Force Open]]
+[[Walk to Your Bed]]
+[[Look Down]]
+You try to force the door open, but you're pretty weak and can't break it.
+
+[[Back|Get out of bed]] 
+Since the door doesn't feel like opening, you don't feel like dealing with that today and head back [[into bed|Asleep]]. 
+You look down to see a note that was slipped under your door. It reads, 
+"Hello, $name. I wanna play a game. You are locked inside this room, and there is only one way out. I have hidden a key somewhere in your room. You must find the key to escape, or you will die here from hunger or something. Good luck. 
+-Seesaw"
+
+Looks like you should [[start looking for the key]].
+
+(put: (prompt: "What's your name?") into $name)
+Your name is $name.
+
+You are now falling [[Asleep]] 
+
+There are only a couple places you think the key could be. Where should you check first?
+
+[[Under Bed]]
+[[Clothes Dresser]]
+[[Bookcase]]
+
+[[Give Up]]
+You look under your bed. It is too dark to see what is under there. You can only see black outlines of stuff.
+
+[[Reach for Black Outline 1]]
+[[Reach for Black Outline 2]]
+[[Look Somewhere Else|start looking for the key]]
+You go up to your dresser and there are three drawers.
+
+[[Drawer 1]]
+[[Drawer 2]]
+[[Drawer 3]]
+
+[[Look Somewhere Else|start looking for the key]]
+Your bookcase doesn't contain any actual books. It is loaded with bluerays and video games. Priorities right?
+
+[[Back|start looking for the key]] 
+You reach under and pull out a sock. You the put it back, as it is not the key.
+
+[[Back|Under Bed]]
+You reach under and pull out a dusty piece of pizza.
+
+[[Take a bite]]
+
+[[Go Back|Under Bed]]
+You take a bite and instantly regret the decision.
+
+[[Back|Under Bed]]
+This drawer contains all of your fancy shirts.
+
+[[Back|Clothes Dresser]] 
+This drawer contains all of your fancy pants.
+
+[[Back|Clothes Dresser]]
+This drawer contains all of your fancy underwear.
+
+[[Back|Clothes Dresser]] 
+Where oh where could this key be. You look back at the note Seesaw left you and notice something strange. There is something taped to the back of it. It's the key. It has a sticky note on it that says, "Note to self, remember to hide the key."
+
+[[Next]]
+With they key in hand, you head towards the door and try to open it. You slowly fit the key into the hole and twist. The door opens and you can now head [[downstairs]].
+You head downstairs but it seems that the game is not yet over.. 
+[[Or is it?|Asleep]]
